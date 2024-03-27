@@ -18,8 +18,29 @@ export class UserFormComponent {
         pin:new FormControl()
       }),
 
-      cards:new FormArray([])
+      cards:new FormArray([]),
+      type: new FormControl(),
+     
     })
+
+    constructor(){
+      this.userForm.get('type')?.valueChanges.subscribe(
+        (data:any)=>{
+          if(data == 'dayScholor'){
+            //add busfee
+            this.userForm.addControl('busFee',new FormControl());
+            //remove hostelfee
+            this.userForm.addControl('hostelFee',new FormControl());
+          }
+          else{
+            //add hostelfee
+            this.userForm.addControl('hostelFee',new FormControl());
+            //remove busfee
+            this.userForm.removeControl('busFee');
+          }
+        }
+      )
+    }
 
     get cardsFormArray(){
       return this.userForm.get("cards") as FormArray;
@@ -42,19 +63,5 @@ export class UserFormComponent {
 
     delete(i:number){
       this.cardsFormArray.removeAt(i);
-    }
-
-    public radioForm=new FormGroup({
-      radiio: new FormControl(),
-      dayScholorship: new FormControl(),
-      residential: new FormControl(),
-      busFee:new FormControl(),
-      hostelFee:new FormControl()
-    })
-
-    dayScholorship(){
-      
-    }
-
-    
+    } 
 }

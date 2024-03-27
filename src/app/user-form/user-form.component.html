@@ -53,23 +53,28 @@
         </div>
         </div>
     </div>
-    <button type="button" class="btn btn-success" (click)="submit()">submit</button>
 
-</form>
-<hr><hr>
-<br>
-<div formGroupName="radioForm">
+    <br><br>
     <label for="">Type:</label>
-    <input type="radio" (click)="dayScholorship()" formControlName="dayScholorship">
-    <label for="">Day-Scholorship</label>
-    <input type="radio" formControlName="residential">
+    <input type="radio" formControlName="type" value="dayScholor">
+    <label for="">DayScholor</label>
+    <input type="radio" formControlName="type" value="residential">
     <label for="">Residential</label>
     <br><br>
-    <label for="">Bus-Fee:</label>
+ <div *ngIf="userForm.get('type')?.value=='dayScholor'">
+    <label for="">BusFee:</label>
     <input type="number" formControlName="busFee">
-    <br><br>
+</div>
+<div *ngIf="userForm.get('type')?.value == 'residential'">
     <label for="">Hostel-Fee:</label>
     <input type="number" formControlName="hostelFee" >
     <br>
 </div>
+<br>
+    <button type="button" class="btn btn-success" (click)="submit()">submit</button>
+</form>
+
+
+
+
 
