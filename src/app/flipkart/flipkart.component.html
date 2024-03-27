@@ -1,0 +1,11 @@
+<div class="parent">
+    <div *ngFor="let product of products" class="card">
+        <p><img src={{product.image}} alt="" ></p>
+        <p class="rating">{{product.rating.rate}}<i style="color: rgb(3, 135, 3);" class="fa-solid fa-star"></i> {{product.rating.count}}</p>
+        <p class="category">{{product.category}}</p>
+        <p class="title">{{product.title}}</p>
+        <p class="price"><b>Rs.</b>{{product.price}}</p>
+       
+       
+    </div>
+</div>

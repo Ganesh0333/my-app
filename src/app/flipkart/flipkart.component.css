@@ -1,0 +1,46 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.card{
+    height: 350px;
+    width: 180px;
+    /* background-color: pink; */
+    margin: 20px;
+    display: inline-block;
+    position: relative;
+    border: none;
+}
+
+img{
+    height: 180px;
+    width: 178px;
+    
+}
+.rating{
+    height: 25px;
+    width: 70px;
+    font-size: 12px;
+    background-color: rgb(215, 213, 213);
+    position: relative;
+    bottom:50px;
+    text-align: center;
+     
+}
+.title{
+    font-size: 15px;
+    overflow: auto;
+}
+.category{
+    font-size: 20px;
+    margin-top: -50px;
+    
+}
+.price{
+    margin-top: -20px;
+}

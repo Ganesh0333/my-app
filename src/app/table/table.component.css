@@ -1,0 +1,24 @@
+button{
+    margin: 5px;
+}
+.top-containor{
+    height: 230px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-left-containor{
+    height: 230px;
+    width: 635px;
+    background-color: brown;
+}
+.top-right-containor{
+    height: 230px;
+    width: 351px;
+    background-color: brown;
+}
+label{
+    width: 70px;
+    display: inline block;
+    justify-content: center;
+}

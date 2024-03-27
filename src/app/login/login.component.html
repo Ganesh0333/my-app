@@ -1,0 +1,14 @@
+<div class="parent">
+    <div class="black-container">
+    <div class="child">
+        <h1>LOGIN</h1>
+        <form [formGroup]="loginForm" >
+        <input type="text" placeholder="Email or phoneNumber" formControlName="email" class="form-control">
+        <br>
+        <input type="text" placeholder="Password" formControlName="password" class="form-control">
+        <br>
+        <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+    </form>
+    </div>
+</div>
+</div>

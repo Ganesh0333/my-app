@@ -1,0 +1,47 @@
+<div class="parent">
+  <div class="top-containor">
+    <div>
+      <h1>Filters</h1>
+    </div>
+    <div>
+      <label for="">Price range:</label>
+      <select name="" id="">
+        <option value="">ALL</option>
+        <option value="">high to low</option>
+        <option value="">low to high</option>
+      </select>
+    </div>
+  </div>
+  <div class="child-containor">
+  <div class="left-containor">
+    <h1>Category</h1>
+   <ul class="list">
+    <li  *ngFor="let category of categoryList"><input type="checkbox" (change)="changeCategory()" [(ngModel)]= "category.checked">{{category.category}}</li>
+   </ul>
+    <h1>Price</h1>
+    <input type="checkbox" (click)="upto50()" class="i1">
+    <label for="">Rs.0 to Rs.50</label>
+    <br>
+    <input type="checkbox" (click)="upto300()" class="i1">
+    <label for="">Rs.50 to Rs.300</label>
+    <br>
+    <input type="checkbox" (click)="upto600()" class="i1">
+    <label for="">Rs.300 to Rs.600</label>
+    <br>
+    <input type="checkbox" (click)="upto1000()" class="i1">
+    <label for="">Rs.600 to Rs.1000</label>
+
+  </div>
+  <div class="right-containor">
+    <div *ngFor="let product of products" class="card">
+      <img src={{product.image}} alt="" class="image">
+      <p class="rating">{{product.rating.rate}} <span><i class="fa-solid fa-star"
+            style="color: rgb(2, 99, 2);"></i>|14</span></p>
+      <h1 class="title1">{{product.category}}</h1>
+      <p class="title">{{product.title}}</p>
+      <p class="price"><b>Rs.</b>{{product.price}} <del>Rs.200</del></p>
+
+    </div>
+  </div>
+</div>
+</div>

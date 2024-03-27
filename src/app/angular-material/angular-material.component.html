@@ -1,0 +1,45 @@
+
+
+<h5>hello</h5>
+<p>
+<mat-slide-toggle >Toggle me!</mat-slide-toggle>
+</p>
+
+<h5>hello</h5>
+<div class="badge">
+<div matBadge="4" matBadgeOverlap="false" class="demo-section">Text with a badge</div>
+</div>
+
+<div class="demo-section">
+    Button with a badge on the left
+    <button mat-raised-button color="primary"
+        matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+      Action
+    </button>
+  </div>
+  <div class="demo-section">
+    Button toggles badge visibility
+    <button mat-raised-button  matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+        Hide
+    </button>
+    <div class="demo-section">
+      Icon with a badge
+      <mat-icon matBadge="15" matBadgeColor="warn"><p><i class="fa-solid fa-house"></i></p>home</mat-icon>
+
+        <span class="cdk-visually-hidden">
+          Example with a home icon with overlaid badge showing the number 15
+        </span>
+    </div>
+
+  <button mat-raised-button (click)="openBottomSheet()">Open file</button>
+
+<br><br>
+<hr>
+  <mat-card>
+    <mat-card-header>
+      Rebal <i class="fa-solid fa-star"> Prabhas</i> 
+    </mat-card-header>
+    <mat-card-content>Uppalapati Venkata Suryanarayana Prabhas Raju ([pɾabʱaːs] born 23 October 1979) is an Indian actor who works predominantly in Telugu cinema.[4] One of the highest-paid actors in Indian cinema,[5] Prabhas has featured in Forbes India's Celebrity 100 list since 2015[6][7][8] and has received seven Filmfare Awards nominations, a Nandi Award, and a SIIMA Award. Prabhas is referred to in the media as the "Rebel Star" and "Darling".[9]</mat-card-content>
+  
+  </mat-card>
+</div>

@@ -1,0 +1,40 @@
+<form [formGroup]="candidate">
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label for="">experience:</label>
+    <input type="number" formControlName="experience1">
+    <br>
+    <div formGroupName="experience2">
+    <label for="">company:</label>
+    <input type="text" formControlName="company1">
+    <br>
+    <label for="">experience:</label>
+    <input type="text" formControlName="experience3">
+    <br>
+    <label for="">pacakge:</label>
+    <input type="text" formControlName="pacakge1">
+    <br>
+    </div>
+    <br>
+    <button type="button" class="btn btn-warning" (click)="add1()">ADD</button>
+    <div formArrayName="skills">
+        <div *ngFor="let skill of skillsFormArray.controls, let i=index">
+        <div formGroupName="{{i}}">
+            <label for="">Name:</label>
+            <input type="text" formControlName="name2">
+            <br>
+            <label for="">Rating:</label>
+            <input type="number" formControlName="rating1">
+            <br>
+            <label for="">Experience:</label>
+            <input type="number" formControlName="experirnce1">
+            <br>
+           
+        </div>
+    </div>
+</div>
+<br>
+<button type="button"   class="btn btn-success" (click)="submit1()">SUBMIT</button>
+</form>
+

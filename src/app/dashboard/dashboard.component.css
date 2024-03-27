@@ -1,0 +1,48 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(19, 215, 153);
+    display: flex;
+}
+.child{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(20, 213, 155);
+    display: flex;
+    
+}
+.left{
+    height: 100%;
+    width: 20%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    overflow: auto;
+    
+
+}
+.right{
+    height: 100%;
+    width: 80%;
+    background-color: rgb(14, 191, 204);
+    overflow: auto;
+    
+}
+@media screen and (min-width:550px){
+    .left{
+        width: auto;
+    }
+}
+@media screen and (max-width:649px){
+    .left{
+        width: auto;
+        /* background-color: rgb(45, 200, 91); */
+    }
+}
+@media screen and (max-width:549px){
+    .left{
+        width: auto;
+        /* background-color: rgb(200, 45, 151); */
+    }
+}

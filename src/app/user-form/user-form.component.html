@@ -1,0 +1,74 @@
+<form [formGroup]="userForm">
+
+    <label for="">Name:</label>
+    <input type="text" formControlName="name">
+    <br><br>
+
+    
+    <label for="">Age:</label>
+    <input type="number" formControlName="age">
+    <br><br>
+
+    
+    <label for="">Phone:</label>
+    <input type="number" name="" id="" formControlName="phone">
+    <br><br>
+
+    
+    <label for="">Email:</label>
+    <input type="text" formControlName="email">
+    <br><br>
+
+    <div formGroupName="address">
+    
+        <label for="">city:</label>
+        <input type="text" formControlName="city">
+        <br><br>
+
+        <label for="">pin:</label>
+        <input type="text" formControlName="pin">
+    </div>
+
+ 
+    
+    <br>
+    <button type="button" class="btn btn-primary" (click)="add()">Addcard</button>
+    <br><br>
+    <div formArrayName="cards">
+        <div *ngFor="let card of cardsFormArray.controls;let i=index">
+        <div formGroupName="{{i}}">
+            <label for="">Number</label>
+            <input type="number" formControlName="number">
+            <br><br>
+            <label for="">Expiry</label>
+            <input type="month" formControlName="expiry">
+            <br><br>
+            <label for="">Cvv</label>
+            <input type="number" formControlName="cvv">
+            <br><br>
+            <button (click)="delete(i)" type="button" class="btn btn-danger">Delete</button>
+            <hr>
+
+        </div>
+        </div>
+    </div>
+    <button type="button" class="btn btn-success" (click)="submit()">submit</button>
+
+</form>
+<hr><hr>
+<br>
+<div formGroupName="radioForm">
+    <label for="">Type:</label>
+    <input type="radio" (click)="dayScholorship()" formControlName="dayScholorship">
+    <label for="">Day-Scholorship</label>
+    <input type="radio" formControlName="residential">
+    <label for="">Residential</label>
+    <br><br>
+    <label for="">Bus-Fee:</label>
+    <input type="number" formControlName="busFee">
+    <br><br>
+    <label for="">Hostel-Fee:</label>
+    <input type="number" formControlName="hostelFee" >
+    <br>
+</div>
+
